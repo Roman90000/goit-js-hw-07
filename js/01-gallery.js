@@ -23,11 +23,13 @@ function openImgBigFoto(e) {
     const instance = basicLightbox.create(`<img src="${img}" width="800" height="600" />`);
     instance.show()
 
-    window.addEventListener('keydown', e => {
+  window.addEventListener('keydown', keydownEscape);
+  
+  function keydownEscape (e) {
         if (e.code === "Escape") {
             instance.close();
         }
-    })
+    }
 };
 
 
