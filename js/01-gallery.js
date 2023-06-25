@@ -27,7 +27,8 @@ function openImgBigFoto(e) {
   
   function keydownEscape (e) {
         if (e.code === "Escape") {
-            instance.close();
+          instance.close();
+          window.removeEventListener('keydown', keydownEscape);
         }
     }
 };

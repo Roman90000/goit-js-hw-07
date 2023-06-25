@@ -10,10 +10,10 @@ const galleryItemsImages = galleryItems.map(({preview, original, description}) =
 
 gallery.insertAdjacentHTML('beforeend', galleryItemsImages);
 
-gallery.addEventListener('click', openImgBigFoto);
 
-function openImgBigFoto(e) {
-    e.preventDefault();
 
-    new SimpleLightbox('.gallery__item a');
-};
+new SimpleLightbox('.gallery__item a', {
+   animationSpeed: 250,
+   captionPosition: 'bottom',
+   captionsData: 'alt',
+});
